@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Century Gothic';
+    background: #e9e9e9;
+}
+
+.container{
+    width: 400px;
+    max-width: 100%;
+    min-height: 500px;
+    border: solid grey 5px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.container .list-cover{
+    padding: 50px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container .list-input{
+    display: flex;
+}
+
+.container .list-input input{
+    border: none;
+    border-bottom: solid grey 2px;
+    font-size: 25px;
+    outline: none;
+}
+
+.container h1{
+    margin: 10px 0px 5px 15px;
+    color: #111111;
+}
+
+.container .list-input h1{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.container .list-cover .list-input .add{
+    color: #19ee24;
+}
+
+.container .list-cover .remove{
+    color: red;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.container .list-input button{
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+.container .list-cover .list{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+}
+
+.container .list-cover .list li{
+    font-size: 23px;
+    border-bottom: solid grey 2px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-break: break-all;
+    padding: 5px 10px;
+}
+
+.container .list-cover .list li.close{
+    display: none;
+}
