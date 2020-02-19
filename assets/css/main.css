@@ -44,8 +44,8 @@ body{
 }
 
 .container h1{
-    margin: 10px 0px 5px 15px;
     color: #111111;
+    text-align: center;
 }
 
 .container .list-input h1{
