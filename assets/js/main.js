@@ -3,7 +3,10 @@ const textInput = document.querySelector('.input');
 const todoList = document.querySelector('.name-list');
 
 
-add.addEventListener('click', ()=>{
+add.addEventListener('click', addItem);
+todoList.addEventListener('click', removeItem);
+
+function addItem(){
     const newli = document.createElement('li');
     const liContent = document.createTextNode(textInput.value);
     const newSpan = document.createElement('span');
@@ -15,20 +18,14 @@ add.addEventListener('click', ()=>{
     newSpan.appendChild(spanContent);
     newli.appendChild(newSpan);
     todoList.appendChild(newli);
+    textInput.value = '';
+}
 
-    const allSpan = document.querySelectorAll('li .remove');
-    const allLi = document.querySelectorAll('li');
-
-    allSpan.forEach(span => {
-        span.addEventListener('click', function(){
-           allLi.forEach(li =>{
-                li.addEventListener('click', function(){
-                        li.classList.add('close');
-                    });
-                });
-        });
-    });
-    textInput.value = ''; // for clearing the text of input
-});
-
-
+function removeItem(e){
+    if(e.target.classList.contains('remove')){
+        if(confirm('Are you sure?')){
+            const li = e.target.parentElement;
+            todoList.removeChild(li);
+        }
+    }
+}
