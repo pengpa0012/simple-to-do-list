@@ -16,7 +16,7 @@ body{
 
 .container{
     width: 400px;
-    max-width: 100%;
+    max-width: 80%;
     min-height: 500px;
     border: solid grey 5px;
     border-radius: 10px;
@@ -88,4 +88,26 @@ body{
 
 .container .list-cover .list li.close{
     display: none;
+}
+
+@media (max-width: 450px){
+    
+    .container .list-cover{
+        padding: 50px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .container .list-input input{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    
+    .container .list-cover .list li{
+        font-size: 18px;
+    }
 }
